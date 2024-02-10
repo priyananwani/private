@@ -5,9 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel = "stylesheet" href="css/main.css">
+    <script src="script.js"></script>
 
 </head>
 <body>
+    <nav class="container mxx-auto p-6 flow-root">
+        <!--flex-container-->
+        <div class="flex items-center justify-between">
+            <!--logo-->
+            <div class="pt-2">
+                <a href="/">
+                    <img
+                        src="https://www.indiratrade.com/App_Themes/images/Logo.svg"
+                        alt="logo"
+                    />
+                </a>
+            </div>
+            <!--Menu items-->
+            <div
+                class="absolute right-24 float-right hidden md:flex space-x-10 px-6"
+            >
+                <a href="about.html" class="hover:text-zomp">ABOUT US</a
+                ><!--lavender-->
+                <a href="#" class="hover:text-zomp">PRODUCT</a>
+                <a href="#" class="hover:text-zomp">MARKET</a>
+                <a href="#" class="hover:text-zomp">PRICING</a>
+            </div>
+            <!--Button-->
+            <a
+                href="login.html"
+                class="absolute right-0 md:block p-3 px-6 pt-2 my-5 mt-6 text-white bg-skobeloff rounded-lg middle hover:bg-zomp md:block loginBtn"
+            >
+            Signup<!--bg-royalPurple-->
+            </a>
+            <!--Hamburg Icon-->
+            <button
+                id="menu-btn"
+                class="open block hamburger md:hidden focus:outline-none"
+            >
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+        <!--Mobile Menu-->
+        <div class="md:hidden">
+            <div
+                id="menu"
+                class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+            >
+                <a href="about.html">About Us</a>
+                <a href="#">Pricing</a>
+                <a href="#">Product</a>
+                <a href="#">Career</a>
+                <a href="#">Market</a>
+                <a
+						href="login.html"
+						class="md:block p-3 px-6 pt-2 my-5 mt-6 text-white bg-skobeloff rounded-lg middle hover:bg-zomp md:block"
+					>
+						Signup<!--bg-royalPurple-->
+					</a>
+            </div>
+        </div>
+    </nav>
     <div class="flex items-center justify-center min-h-screen ">
         <div class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0">
             <div class="flex flex-col justify-center p-8 md:p-14">
@@ -34,7 +94,7 @@
                     <span class="font-bold text-md">Forgot Password</span>
 
                 </div>
-                <button class="w-full bg-pineGreen text-white p-2 rounded-lg mb-6 hover:bg-zomp hover:border hover:border-gray-300">Login</button>
+                <button class="w-full bg-pineGreen text-white p-2 rounded-lg mb-6 hover:bg-zomp hover:border hover:border-gray-300" onclick="loginExc()">Login</button>
                 <div class="text-center text-gray-400">
                     Don't have an account? 
                     <span class="font-bold text-black">Sign up for free</span>
